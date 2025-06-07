@@ -33,6 +33,16 @@ export default function Home() {
       >
         {isCounting ? "Stop" : "Start"}
       </button>
+      <button
+        className="ml-4 px-6 py-3 text-lg bg-gray-300 hover:bg-gray-400 rounded-full shadow-md transition-all duration-200"
+        onClick={() => {
+          setIsCounting(false);
+          setCount(0);
+        }
+      }
+      >
+        Reset
+      </button>
     </div>
   );
 }
