@@ -22,27 +22,27 @@ export default function Home() {
       <div className="text-6xl font-mono font-semibold bg-white px-8 py-4 rounded-2xl shadow-lg mb-6">
         {count}
       </div>
-
-      <button
-        className={`px-6 py-3 text-lg rounded-full shadow-md transition-all duration-200 ${
-          isCounting
-            ? "bg-red-500 hover:bg-red-600 text-white"
-            : "bg-green-500 hover:bg-green-600 text-white"
-        }`}
-        onClick={() => setIsCounting((prev) => !prev)}
-      >
-        {isCounting ? "Stop" : "Start"}
-      </button>
-      <button
-        className="ml-4 px-6 py-3 text-lg bg-gray-300 hover:bg-gray-400 rounded-full shadow-md transition-all duration-200"
-        onClick={() => {
-          setIsCounting(false);
-          setCount(0);
-        }
-      }
-      >
-        Reset
-      </button>
+      <div>
+        <button
+          className={`px-6 py-3 text-lg rounded-full shadow-md transition-all duration-200 ${
+            isCounting
+              ? "bg-red-500 hover:bg-red-600 text-white"
+              : "bg-green-500 hover:bg-green-600 text-white"
+          }`}
+          onClick={() => setIsCounting((prev) => !prev)}
+        >
+          {isCounting ? "Stop" : "Start"}
+        </button>
+        <button
+          className="ml-4 px-6 py-3 text-lg bg-gray-300 hover:bg-gray-400 rounded-full shadow-md transition-all duration-200"
+          onClick={() => {
+            setIsCounting(false);
+            setCount(0);
+          }}
+        >
+          Reset
+        </button>
+      </div>
     </div>
   );
 }
